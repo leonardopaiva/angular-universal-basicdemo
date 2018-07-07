@@ -14,7 +14,7 @@ livedemo soon
 
 3. For node server (needs to run the node server to see the source code page working):
 
-- `ng build --pro`
+- `ng build --prod`
 - `ng run angular-universal:server`
 - `npm run webpack:serve`
 
@@ -47,7 +47,7 @@ Error: StaticInjectorError(AppServerModule)[NgModuleFactoryLoader -> InjectionTo
 
 # OBS
 
-- use `"ng g c home app.module"` to generate a components, needs to pass app.module.
+- use `"ng g c home app.module"` to generate a component, needs to pass app.module.
 
 
 ------------------------------------------------------------------------------------------------
