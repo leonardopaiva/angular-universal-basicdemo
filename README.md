@@ -26,7 +26,7 @@ Or just use:
 - angular universal doc: `https://github.com/angular/angular-cli/wiki/stories-universal-rendering` 
 
 # Deploy to firebase guide
-This can help deploying the app, but at this moment I still have not been able to make it work
+This article can help deploying the app(It was NOT written by me), but at this moment I still have not been able to make it work
 `https://hackernoon.com/deploying-angular-universal-v6-with-firebase-c86381ddd445`
 
 At this moment i am getting the following error on firebase functions console:
