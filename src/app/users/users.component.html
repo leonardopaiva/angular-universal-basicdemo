@@ -1,0 +1,21 @@
+<p>
+  users works!
+</p>
+<h2>Check page source, you will see both arrays listed.</h2>
+<ul>
+  <li>
+    Just a static array
+  </li>
+  <li *ngFor="let item of items; let currentElementIndex=index">
+    <a [routerLink]="['/users', item.id, item.name]">{{currentElementIndex + 1}}. {{item.name}} </a>
+  </li>
+</ul>
+<br /><br />
+<ul>  
+  <li>
+    Dynamic array, list of github users.
+  </li>
+  <li *ngFor="let user of users; let currentElementIndex=index">
+     <a [routerLink]="['/users', user.id, user.login]">{{currentElementIndex + 1}}. {{user.login}} </a>
+  </li>
+</ul>
