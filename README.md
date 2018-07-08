@@ -36,15 +36,15 @@ you will only need to becareful with the `functions/index.js` file, use it from 
 firebase deploying, you need to follow the article above first, these are just a few commands to help you remember...
 
 Install the node_modules from firebase functions:
-`npm --prefix functions install`
+- `npm --prefix functions install`
 Copy the dist/browser to public
-`cp -a functions/dist/browser/. public/`
+- `cp -a functions/dist/browser/. public/`
 Rename index to index2
-`mv public/index.html public/index2.html`
+- `mv public/index.html public/index2.html`
 Will deploy
-`firebase deploy`
+- `firebase deploy`
 
-`cp -a functions/dist/browser/. public/ && mv public/index.html public/index2.html && firebase deploy`
+- `cp -a functions/dist/browser/. public/ && mv public/index.html public/index2.html && firebase deploy`
 
 
 # OBS
