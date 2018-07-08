@@ -4,11 +4,9 @@ Basic demonstration of angular universal, wich will allow your webapp to be a SE
 
 At this moment the users page source code isnt showing because the users data needs to be get from firebase database, this is because firebase will not accept external call from free plan (i will update soon).
 
-[adjustable](http://google.com "Giiidd"){:target="_blank"}
-
 ### livedemo
 
-[https://angular-universal-basicdemo.firebaseapp.com/](https://angular-universal-basicdemo.firebaseapp.com/){:target="_blank"}
+[https://angular-universal-basicdemo.firebaseapp.com/](https://angular-universal-basicdemo.firebaseapp.com/)
 
 
 # COMANDS
