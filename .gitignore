@@ -5,6 +5,9 @@
 /tmp
 /out-tsc
 /public
+/functions/dist
+/functions/node_modules
+
 
 # dependencies
 /node_modules

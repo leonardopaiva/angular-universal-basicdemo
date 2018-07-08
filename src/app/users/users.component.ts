@@ -31,11 +31,18 @@ export class UsersComponent implements OnInit {
 
   getUsers() {
     const usersObservable = this.dataService.getUsers();
+    console.log('calling subscribe...');
     usersObservable.subscribe(
       (data) => {
         // console.log(data);
         console.log('Data complete...');
         this.users = data;
+      },
+      err => {
+        console.log('Erro: ', err);
+      },
+      () => {
+        console.log('Subscribe complete...');
       }
     );
   }

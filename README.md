@@ -2,9 +2,9 @@
 
 Basic demonstration of angular universal, wich will allow your webapp to be a SEO Friend.
 
-Check users page source code(on browser), and you will see that all the users from github api are there.
+At this moment the users page source code isnt showing because i need to take the users from my firebase database, thats why firebase will not accept external call from free plan (i will update soon).
 
-livedemo soon
+livedemo `https://angular-universal-basicdemo.firebaseapp.com/`
 
 # COMANDS
 
@@ -26,10 +26,32 @@ Or just use:
 - angular universal doc: `https://github.com/angular/angular-cli/wiki/stories-universal-rendering` 
 
 # Deploy to firebase guide
-This article can help deploying the app(It was NOT written by me), but at this moment I still have not been able to make it work
+
+This article can help deploying to firebase(It was NOT written by me), you will only need to becareful with the functions/index.js file, use it from this repository, not the one from the article: 
 `https://hackernoon.com/deploying-angular-universal-v6-with-firebase-c86381ddd445`
 
-At this moment i am getting the following error on firebase functions console:
+
+firebase deploying, you need to follow the tutorial first, these are just a few tutorial commands to help you remember...
+`npm --prefix functions install`                - install the node_modules from firebase functions
+`cp -a functions/dist/browser/. public/`        - copy the dist/browser to public
+`mv public/index.html public/index2.html`       - rename index to index2
+`firebase deploy`                               - will deploy
+
+`cp -a functions/dist/browser/. public/ && mv public/index.html public/index2.html && firebase deploy`
+
+
+# OBS
+
+If you get this error:
+
+`More than one module matches. Use skip-import option to skip importing the component into the closest module.`
+
+thats because you have more than one main modules on your app, app.module and app.server.module, so you need to use `ng g c home app.module` to generate a component/etc. 
+
+
+# Commons Erros
+
+## This one happens because you need to fix your functions/index.js, you can try using this rep functions/index.js :
 
 Error: StaticInjectorError(AppServerModule)[NgModuleFactoryLoader -> InjectionToken MODULE_MAP]: 
   StaticInjectorError(Platform: core)[NgModuleFactoryLoader -> InjectionToken MODULE_MAP]: 
@@ -45,9 +67,98 @@ Error: StaticInjectorError(AppServerModule)[NgModuleFactoryLoader -> InjectionTo
     at _createClass (/user_code/node_modules/@angular/core/bundles/core.umd.js:8299:68)
     at _createProviderInstance$1 (/user_code/node_modules/@angular/core/bundles/core.umd.js:8269:26)
 
-# OBS
 
-- use `"ng g c home app.module"` to generate a component, needs to pass app.module.
+## This error happens because you cant make external request on firebase free plan:
+
+ERROR HttpErrorResponse {
+  headers: HttpHeaders { normalizedNames: Map {}, lazyUpdate: null, headers: Map {} },
+  status: 0,
+  statusText: 'Unknown Error',
+  url: null,
+  ok: false,
+  name: 'HttpErrorResponse',
+  message: 'Http failure response for (unknown url): 0 Unknown Error',
+  error: 
+   ProgressEvent {
+     type: 'error',
+     target: 
+      XMLHttpRequest {
+        onloadstart: null,
+        onprogress: null,
+        onabort: null,
+        onerror: null,
+        onload: null,
+        ontimeout: null,
+        onloadend: null,
+        _listeners: [Object],
+        onreadystatechange: null,
+        _anonymous: undefined,
+        readyState: 4,
+        response: null,
+        responseText: '',
+        responseType: 'text',
+        responseURL: '',
+        status: 0,
+        statusText: '',
+        timeout: 0,
+        upload: [Object],
+        _method: 'GET',
+        _url: [Object],
+        _sync: false,
+        _headers: [Object],
+        _loweredHeaders: [Object],
+        _mimeOverride: null,
+        _request: null,
+        _response: null,
+        _responseParts: null,
+        _responseHeaders: null,
+        _aborting: null,
+        _error: null,
+        _loadedBytes: 0,
+        _totalBytes: 0,
+        _lengthComputable: false },
+     currentTarget: 
+      XMLHttpRequest {
+        onloadstart: null,
+        onprogress: null,
+        onabort: null,
+        onerror: null,
+        onload: null,
+        ontimeout: null,
+        onloadend: null,
+        _listeners: [Object],
+        onreadystatechange: null,
+        _anonymous: undefined,
+        readyState: 4,
+        response: null,
+        responseText: '',
+        responseType: 'text',
+        responseURL: '',
+        status: 0,
+        statusText: '',
+        timeout: 0,
+        upload: [Object],
+        _method: 'GET',
+        _url: [Object],
+        _sync: false,
+        _headers: [Object],
+        _loweredHeaders: [Object],
+        _mimeOverride: null,
+        _request: null,
+        _response: null,
+        _responseParts: null,
+        _responseHeaders: null,
+        _aborting: null,
+        _error: null,
+        _loadedBytes: 0,
+        _totalBytes: 0,
+        _lengthComputable: false },
+     lengthComputable: false,
+     loaded: 0,
+     total: 0 } }
+
+
+
 
 
 ------------------------------------------------------------------------------------------------
