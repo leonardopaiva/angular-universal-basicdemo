@@ -28,23 +28,28 @@ Or just use:
 
 # Deploy to firebase guide
 
-This article can help deploying to firebase(It was NOT written by me):
+This article can help deploying to firebase(It was **NOT** written by me):
 [https://hackernoon.com/deploying-angular-universal-v6-with-firebase-c86381ddd445](https://hackernoon.com/deploying-angular-universal-v6-with-firebase-c86381ddd445)
 you will only need to becareful with the `functions/index.js` file, use it from **this repository**, not the one from the article, this is the source of this rep functions/index.js check helix46 comment from here [https://github.com/aaronte/angular-universal-firebase/issues/3](https://github.com/aaronte/angular-universal-firebase/issues/3)
 
 
 firebase deploying, you need to follow the article above first, these are just a few commands to help you remember...
-`npm --prefix functions install`                - install the node_modules from firebase functions
-`cp -a functions/dist/browser/. public/`        - copy the dist/browser to public
-`mv public/index.html public/index2.html`       - rename index to index2
-`firebase deploy`                               - will deploy
+
+Install the node_modules from firebase functions:
+`npm --prefix functions install`
+Copy the dist/browser to public
+`cp -a functions/dist/browser/. public/`
+Rename index to index2
+`mv public/index.html public/index2.html`
+Will deploy
+`firebase deploy`
 
 `cp -a functions/dist/browser/. public/ && mv public/index.html public/index2.html && firebase deploy`
 
 
 # OBS
 
-If you get this error:
+If you get this error trying to use `ng g c componentname`:
 
 `More than one module matches. Use skip-import option to skip importing the component into the closest module.`
 
@@ -53,7 +58,7 @@ thats because you have more than one main modules on your app, app.module and ap
 
 # Commons Erros
 
-## This one happens because you need to fix your functions/index.js, you can try using this rep functions/index.js :
+### This one happens because you need to fix your functions/index.js, you can try using this rep functions/index.js :
 
 Error: StaticInjectorError(AppServerModule)[NgModuleFactoryLoader -> InjectionToken MODULE_MAP]: 
   StaticInjectorError(Platform: core)[NgModuleFactoryLoader -> InjectionToken MODULE_MAP]: 
@@ -70,7 +75,7 @@ Error: StaticInjectorError(AppServerModule)[NgModuleFactoryLoader -> InjectionTo
     at _createProviderInstance$1 (/user_code/node_modules/@angular/core/bundles/core.umd.js:8269:26)
 
 
-## This error happens because you cant make external request on firebase free plan:
+### This error happens because you cant make external request on firebase free plan:
 
 ERROR HttpErrorResponse {
   headers: HttpHeaders { normalizedNames: Map {}, lazyUpdate: null, headers: Map {} },
