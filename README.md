@@ -173,9 +173,9 @@ ERROR HttpErrorResponse {
 
 # Thanks to
 
-Max for (https://www.udemy.com/the-complete-guide-to-angular-2/?start=0)
-@aaronte for https://hackernoon.com/deploying-angular-universal-v6-with-firebase-c86381ddd445
-@helix46 for (https://github.com/aaronte/angular-universal-firebase/issues/3) the functions/index.js helped alot.
+- Max for (https://www.udemy.com/the-complete-guide-to-angular-2/?start=0)
+- @aaronte for https://hackernoon.com/deploying-angular-universal-v6-with-firebase-c86381ddd445
+- @helix46 for (https://github.com/aaronte/angular-universal-firebase/issues/3) the functions/index.js helped alot.
 
 # AngularUniversal
 
