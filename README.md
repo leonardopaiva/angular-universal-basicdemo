@@ -4,19 +4,20 @@ Basic demonstration of angular universal, wich will allow your webapp to be a SE
 
 At this moment the users page source code isnt showing because the users data needs to be get from firebase database, this is because firebase will not accept external call from free plan (i will update soon).
 
-[livedemo https://angular-universal-basicdemo.firebaseapp.com/](https://angular-universal-basicdemo.firebaseapp.com/)
+###livedemo:
+[https://angular-universal-basicdemo.firebaseapp.com/](https://angular-universal-basicdemo.firebaseapp.com/)
 
 # COMANDS
 
 1. `npm install`
 
-2. For client use just `ng serve` (in client source page will not work).
+2. For client, use just `ng serve` (the source page will NOT work).
 
-3. For node server (needs to run the node server to see the source code page working):
+3. For node server (the source page will work):
 
 - `ng build --prod`
 - `ng run angular-universal:server`
-- `npm run webpack:serve`
+- `npm run webpack:serve`  (you need to add `webpack:server": "webpack --config webpack.server.config.js --progress --colors` to scripts on package.json, just check this rep package.json)
 
 - Now Run `node functions/dist/server.js` will start node server
 
@@ -27,11 +28,12 @@ Or just use:
 
 # Deploy to firebase guide
 
-This article can help deploying to firebase(It was NOT written by me), you will only need to becareful with the functions/index.js file, use it from this repository, not the one from the article: 
-`https://hackernoon.com/deploying-angular-universal-v6-with-firebase-c86381ddd445`
+This article can help deploying to firebase(It was NOT written by me):
+[https://hackernoon.com/deploying-angular-universal-v6-with-firebase-c86381ddd445](https://hackernoon.com/deploying-angular-universal-v6-with-firebase-c86381ddd445)
+you will only need to becareful with the functions/index.js file, use it from this repository, not the one from the article, this is the source of this rep functions/index.js check helix46 comment from here [https://github.com/aaronte/angular-universal-firebase/issues/3](https://github.com/aaronte/angular-universal-firebase/issues/3)
 
 
-firebase deploying, you need to follow the tutorial first, these are just a few tutorial commands to help you remember...
+firebase deploying, you need to follow the article above first, these are just a few commands to help you remember...
 `npm --prefix functions install`                - install the node_modules from firebase functions
 `cp -a functions/dist/browser/. public/`        - copy the dist/browser to public
 `mv public/index.html public/index2.html`       - rename index to index2
