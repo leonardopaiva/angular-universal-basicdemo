@@ -2,9 +2,9 @@
 
 Basic demonstration of angular universal, wich will allow your webapp to be a SEO Friend.
 
-At this moment the users page source code isnt showing because i need to take the users from my firebase database, thats why firebase will not accept external call from free plan (i will update soon).
+At this moment the users page source code isnt showing because the users data needs to be get from firebase database, this is because firebase will not accept external call from free plan (i will update soon).
 
-livedemo `https://angular-universal-basicdemo.firebaseapp.com/`
+[livedemo https://angular-universal-basicdemo.firebaseapp.com/](https://angular-universal-basicdemo.firebaseapp.com/)
 
 # COMANDS
 
