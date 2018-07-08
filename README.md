@@ -61,7 +61,7 @@ thats because you have more than one main modules on your app, app.module and ap
 
 # Commons Erros
 
-### This one happens because you need to fix your functions/index.js, you can try using this rep functions/index.js :
+### This one happens because you need to fix your functions/index.js, and functions/package.json you can try using this rep functions/index.js and package (after changing package remember to reinstall packages) :
 
 Error: StaticInjectorError(AppServerModule)[NgModuleFactoryLoader -> InjectionToken MODULE_MAP]: 
   StaticInjectorError(Platform: core)[NgModuleFactoryLoader -> InjectionToken MODULE_MAP]: 
