@@ -2,7 +2,7 @@
 
 Basic demonstration of angular universal, wich will allow your webapp to be a SEO Friend.
 
-At this moment the users page source code showing will work only on local node server, this is because from firebase hosting/functions the users data needs to be get from firebase database, firebase will not accept external call from free plan (i will update soon).
+**At this moment the users page source code showing will work only on local node server, this is because from firebase hosting/functions the users data needs to be get from firebase database, firebase will not accept external call from free plan (i will update soon).**
 
 ### livedemo
 
