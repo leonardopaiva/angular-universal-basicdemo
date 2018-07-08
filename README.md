@@ -30,7 +30,7 @@ Or just use:
 
 This article can help deploying to firebase(It was NOT written by me):
 [https://hackernoon.com/deploying-angular-universal-v6-with-firebase-c86381ddd445](https://hackernoon.com/deploying-angular-universal-v6-with-firebase-c86381ddd445)
-you will only need to becareful with the functions/index.js file, use it from this repository, not the one from the article, this is the source of this rep functions/index.js check helix46 comment from here [https://github.com/aaronte/angular-universal-firebase/issues/3](https://github.com/aaronte/angular-universal-firebase/issues/3)
+you will only need to becareful with the `functions/index.js` file, use it from **this repository**, not the one from the article, this is the source of this rep functions/index.js check helix46 comment from here [https://github.com/aaronte/angular-universal-firebase/issues/3](https://github.com/aaronte/angular-universal-firebase/issues/3)
 
 
 firebase deploying, you need to follow the article above first, these are just a few commands to help you remember...
