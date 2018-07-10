@@ -56,8 +56,7 @@ If you get this error trying to use `ng g c componentname`:
 
 `More than one module matches. Use skip-import option to skip importing the component into the closest module.`
 
-thats because you have more than one main modules on your app, app.module and app.server.module, so you need to use `ng g c home app.module` to generate a component/etc. 
-
+thats because you have app.module and app.server.module, so you need to use `ng g c home --module app.module` to generate a component/etc. 
 
 # Commons Erros
 
@@ -80,7 +79,7 @@ Error: StaticInjectorError(AppServerModule)[NgModuleFactoryLoader -> InjectionTo
 
 ### This error happens because you cant make external request on firebase free plan:
 
-ERROR HttpErrorResponse {
+```ERROR HttpErrorResponse {
   headers: HttpHeaders { normalizedNames: Map {}, lazyUpdate: null, headers: Map {} },
   status: 0,
   statusText: 'Unknown Error',
@@ -165,7 +164,7 @@ ERROR HttpErrorResponse {
         _lengthComputable: false },
      lengthComputable: false,
      loaded: 0,
-     total: 0 } }
+     total: 0 } }```
 
 
 # Thanks to
