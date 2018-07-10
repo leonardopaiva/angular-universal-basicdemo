@@ -79,7 +79,7 @@ Error: StaticInjectorError(AppServerModule)[NgModuleFactoryLoader -> InjectionTo
 
 ### This error happens because you cant make external request on firebase free plan:
 
-``` ERROR HttpErrorResponse {
+ERROR HttpErrorResponse {
   headers: HttpHeaders { normalizedNames: Map {}, lazyUpdate: null, headers: Map {} },
   status: 0,
   statusText: 'Unknown Error',
@@ -164,7 +164,7 @@ Error: StaticInjectorError(AppServerModule)[NgModuleFactoryLoader -> InjectionTo
         _lengthComputable: false },
      lengthComputable: false,
      loaded: 0,
-     total: 0 } } ```
+     total: 0 } } 
 
 
 # Thanks to
