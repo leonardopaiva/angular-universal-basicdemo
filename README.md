@@ -62,7 +62,7 @@ thats because you have app.module and app.server.module, so you need to use `ng 
 
 ### This one happens because you need to fix your functions/index.js, and functions/package.json you can try using this rep functions/index.js and package (after changing package remember to reinstall packages) :
 
-Error: StaticInjectorError(AppServerModule)[NgModuleFactoryLoader -> InjectionToken MODULE_MAP]: 
+```Error: StaticInjectorError(AppServerModule)[NgModuleFactoryLoader -> InjectionToken MODULE_MAP]: 
   StaticInjectorError(Platform: core)[NgModuleFactoryLoader -> InjectionToken MODULE_MAP]: 
     NullInjectorError: No provider for InjectionToken MODULE_MAP!
     at NullInjector.get (/user_code/node_modules/@angular/core/bundles/core.umd.js:1118:19)
@@ -75,6 +75,7 @@ Error: StaticInjectorError(AppServerModule)[NgModuleFactoryLoader -> InjectionTo
     at resolveNgModuleDep (/user_code/node_modules/@angular/core/bundles/core.umd.js:8252:29)
     at _createClass (/user_code/node_modules/@angular/core/bundles/core.umd.js:8299:68)
     at _createProviderInstance$1 (/user_code/node_modules/@angular/core/bundles/core.umd.js:8269:26)
+```
 
 
 ### This error happens because you cant make external request on firebase free plan:
