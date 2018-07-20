@@ -19,7 +19,7 @@ Basic demonstration of angular universal, wich will allow your webapp to be a SE
 
 - `ng build --prod`
 - `ng run angular-universal:server`
-- `npm run webpack:serve`  (you need to add `webpack:server": "webpack --config webpack.server.config.js --progress --colors` to scripts on package.json, just check this rep package.json)
+- `npm run webpack:server`  (to use this command you need to add `webpack:server": "webpack --config webpack.server.config.js --progress --colors` to scripts on package.json, just check this rep package.json)
 
 - Now Run `node functions/dist/server.js` will start node server
 
@@ -78,7 +78,7 @@ thats because you have app.module and app.server.module, so you need to use `ng 
 ```
 
 
-### This error happens because you cant make external request on firebase free plan:
+### Working on this error, update firebase plan will not solve it:
 
         ERROR HttpErrorResponse {
           headers: HttpHeaders { normalizedNames: Map {}, lazyUpdate: null, headers: Map {} },
